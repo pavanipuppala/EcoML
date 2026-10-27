@@ -1,0 +1,54 @@
+"""
+EcoML Configuration Package.
+
+Exposes configuration constants and theme definitions.
+"""
+
+from config.settings import (
+    PROJECT_NAME,
+    PROJECT_TAGLINE,
+    PROJECT_VERSION,
+    PROJECT_STATUS,
+    PROJECT_DESCRIPTION,
+    BASE_DIR,
+    DATA_DIR,
+    RAW_DATA_DIR,
+    PROCESSED_DATA_DIR,
+    SRC_DIR,
+    CONFIG_DIR,
+    EXPERIMENTS_DIR,
+    MODELS_DIR,
+    REPORTS_DIR,
+    TESTS_DIR,
+    THEME_COLORS,
+    PLANNED_FEATURES,
+    FUTURE_ROADMAP_FEATURES,
+    ROADMAP_STEPS,
+    RANDOM_STATE,
+    TEST_SIZE_DEFAULT,
+)
+
+__all__ = [
+    "PROJECT_NAME",
+    "PROJECT_TAGLINE",
+    "PROJECT_VERSION",
+    "PROJECT_STATUS",
+    "PROJECT_DESCRIPTION",
+    "BASE_DIR",
+    "DATA_DIR",
+    "RAW_DATA_DIR",
+    "PROCESSED_DATA_DIR",
+    "SRC_DIR",
+    "CONFIG_DIR",
+    "EXPERIMENTS_DIR",
+    "MODELS_DIR",
+    "REPORTS_DIR",
+    "TESTS_DIR",
+    "THEME_COLORS",
+    "PLANNED_FEATURES",
+    "FUTURE_ROADMAP_FEATURES",
+    "ROADMAP_STEPS",
+    "RANDOM_STATE",
+    "TEST_SIZE_DEFAULT",
+]
+

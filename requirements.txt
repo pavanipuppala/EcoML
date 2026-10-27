@@ -1,0 +1,25 @@
+# EcoML — Carbon and Energy-Aware Machine Learning Model Selector
+# Core Dependencies for Project Execution
+
+# Web Application & UI
+streamlit>=1.30.0
+
+# Data Manipulation & Numerical Computing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine Learning & Evaluation
+scikit-learn>=1.3.0
+
+# System Resource Monitoring
+psutil>=5.9.0
+
+# Environmental Impact & Carbon Tracking
+codecarbon>=2.3.0
+
+# Data Visualization & Charting
+plotly>=5.18.0
+
+# Testing Framework
+pytest>=8.0.0
+

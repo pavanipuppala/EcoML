@@ -1,0 +1,42 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Testing
+.pytest_cache/
+
+# CodeCarbon logs & output
+emissions.csv
+.codecarbon.config
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Generated logs
+*.log
+
+# Exclude local uploaded datasets
+data/raw/uploads/*
+!data/raw/uploads/.gitkeep
+
+# Python virtual environments
+.venv/
+.venv-1/
+venv/
+env/

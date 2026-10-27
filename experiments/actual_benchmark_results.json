@@ -1,0 +1,841 @@
+{
+  "classification": {
+    "dataset": "Wisconsin Breast Cancer Diagnostic",
+    "n_samples": 569,
+    "n_features": 30,
+    "train_samples": 455,
+    "test_samples": 114,
+    "models": [
+      {
+        "model_id": "logistic_regression",
+        "model_name": "Logistic Regression",
+        "status": "SUCCESS",
+        "accuracy": 0.9824561403508771,
+        "precision": 0.9824561403508771,
+        "recall": 0.9824561403508771,
+        "f1": 0.9824561403508771,
+        "training_time_sec": 0.005121299996972084,
+        "prediction_time_sec": 0.000195500033441931,
+        "latency_per_sample_ms": 0.0017149125740520265,
+        "baseline_ram_mb": 168.04,
+        "ram_current_mb": 168.62,
+        "ram_delta_mb": 0.58,
+        "carbon_emissions_g": null,
+        "energy_status": "Disabled (Opt-in tracking not requested)"
+      },
+      {
+        "model_id": "decision_tree",
+        "model_name": "Decision Tree",
+        "status": "SUCCESS",
+        "accuracy": 0.9122807017543859,
+        "precision": 0.9160721496836722,
+        "recall": 0.9122807017543859,
+        "f1": 0.9130211893369787,
+        "training_time_sec": 0.004684599989559501,
+        "prediction_time_sec": 0.00016440002946183085,
+        "latency_per_sample_ms": 0.0014421055215950076,
+        "baseline_ram_mb": 168.65,
+        "ram_current_mb": 168.79,
+        "ram_delta_mb": 0.14,
+        "carbon_emissions_g": null,
+        "energy_status": "Disabled (Opt-in tracking not requested)"
+      },
+      {
+        "model_id": "random_forest",
+        "model_name": "Random Forest",
+        "status": "SUCCESS",
+        "accuracy": 0.956140350877193,
+        "precision": 0.9560729421281235,
+        "recall": 0.956140350877193,
+        "f1": 0.9560273762928302,
+        "training_time_sec": 0.12661730003310367,
+        "prediction_time_sec": 0.005667600024025887,
+        "latency_per_sample_ms": 0.04971578968443761,
+        "baseline_ram_mb": 168.82,
+        "ram_current_mb": 169.21,
+        "ram_delta_mb": 0.37,
+        "carbon_emissions_g": null,
+        "energy_status": "Disabled (Opt-in tracking not requested)"
+      },
+      {
+        "model_id": "knn",
+        "model_name": "K-Nearest Neighbors",
+        "status": "SUCCESS",
+        "accuracy": 0.956140350877193,
+        "precision": 0.9560729421281235,
+        "recall": 0.956140350877193,
+        "f1": 0.9560273762928302,
+        "training_time_sec": 0.0005658000009134412,
+        "prediction_time_sec": 0.0030851999763399363,
+        "latency_per_sample_ms": 0.027063157687192425,
+        "baseline_ram_mb": 169.2,
+        "ram_current_mb": 169.26,
+        "ram_delta_mb": 0.05,
+        "carbon_emissions_g": null,
+        "energy_status": "Disabled (Opt-in tracking not requested)"
+      },
+      {
+        "model_id": "gradient_boosting",
+        "model_name": "Gradient Boosting",
+        "status": "SUCCESS",
+        "accuracy": 0.956140350877193,
+        "precision": 0.9568690958164642,
+        "recall": 0.956140350877193,
+        "f1": 0.9557756825927252,
+        "training_time_sec": 0.262779499986209,
+        "prediction_time_sec": 0.0004135000053793192,
+        "latency_per_sample_ms": 0.0036271930296431507,
+        "baseline_ram_mb": 170.94,
+        "ram_current_mb": 171.03,
+        "ram_delta_mb": 0.07,
+        "carbon_emissions_g": null,
+        "energy_status": "Disabled (Opt-in tracking not requested)"
+      }
+    ],
+    "profiles": {
+      "Balanced": {
+        "top_model": "Logistic Regression",
+        "top_score": 98.77,
+        "pareto_models": [
+          "logistic_regression"
+        ],
+        "effective_weights": {
+          "performance": 0.4705882352941177,
+          "train_time": 0.17647058823529413,
+          "inference_latency": 0.17647058823529413,
+          "ram": 0.17647058823529413
+        },
+        "redistribution_note": "Energy/Carbon telemetry was unavailable on this host; its 15.0% weight was dynamically redistributed across predictive performance (47.1%), training time (17.6%), latency (17.6%), and RAM footprint (17.6%).",
+        "ranked": [
+          {
+            "rank": 1,
+            "model_id": "logistic_regression",
+            "model_name": "Logistic Regression",
+            "composite_score": 98.77,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.9824561403508771,
+              "train_time": 0.9826267658924225,
+              "inference_latency": 0.9943487418209732,
+              "ram": 1.0
+            }
+          },
+          {
+            "rank": 2,
+            "model_id": "decision_tree",
+            "model_name": "Decision Tree",
+            "composite_score": 94.38,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9130211893369787,
+              "train_time": 0.9842922014033705,
+              "inference_latency": 1.0,
+              "ram": 0.9294605809128682
+            }
+          },
+          {
+            "rank": 3,
+            "model_id": "knn",
+            "model_name": "K-Nearest Neighbors",
+            "composite_score": 83.88,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9560273762928302,
+              "train_time": 1.0,
+              "inference_latency": 0.4692542612001727,
+              "ram": 0.7344398340249015
+            }
+          },
+          {
+            "rank": 4,
+            "model_id": "random_forest",
+            "model_name": "Random Forest",
+            "composite_score": 67.48,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9560273762928302,
+              "train_time": 0.5192795035527931,
+              "inference_latency": 0.0,
+              "ram": 0.7551867219916995
+            }
+          },
+          {
+            "rank": 5,
+            "model_id": "gradient_boosting",
+            "model_name": "Gradient Boosting",
+            "composite_score": 61.83,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9557756825927252,
+              "train_time": 0.0,
+              "inference_latency": 0.9547354309922329,
+              "ram": 0.0
+            }
+          }
+        ]
+      },
+      "Green-First": {
+        "top_model": "Logistic Regression",
+        "top_score": 98.8,
+        "pareto_models": [
+          "logistic_regression"
+        ],
+        "effective_weights": {
+          "performance": 0.3125,
+          "train_time": 0.3125,
+          "inference_latency": 0.18749999999999997,
+          "ram": 0.18749999999999997
+        },
+        "redistribution_note": "Energy/Carbon telemetry was unavailable on this host; its 20.0% weight was dynamically redistributed across predictive performance (31.2%), training time (31.2%), latency (18.7%), and RAM footprint (18.7%).",
+        "ranked": [
+          {
+            "rank": 1,
+            "model_id": "logistic_regression",
+            "model_name": "Logistic Regression",
+            "composite_score": 98.8,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.9824561403508771,
+              "train_time": 0.9826267658924225,
+              "inference_latency": 0.9943487418209732,
+              "ram": 1.0
+            }
+          },
+          {
+            "rank": 2,
+            "model_id": "decision_tree",
+            "model_name": "Decision Tree",
+            "composite_score": 95.47,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9130211893369787,
+              "train_time": 0.9842922014033705,
+              "inference_latency": 1.0,
+              "ram": 0.9294605809128682
+            }
+          },
+          {
+            "rank": 3,
+            "model_id": "knn",
+            "model_name": "K-Nearest Neighbors",
+            "composite_score": 83.7,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9560273762928302,
+              "train_time": 1.0,
+              "inference_latency": 0.4692542612001727,
+              "ram": 0.7344398340249015
+            }
+          },
+          {
+            "rank": 4,
+            "model_id": "random_forest",
+            "model_name": "Random Forest",
+            "composite_score": 60.26,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9560273762928302,
+              "train_time": 0.5192795035527931,
+              "inference_latency": 0.0,
+              "ram": 0.7551867219916995
+            }
+          },
+          {
+            "rank": 5,
+            "model_id": "gradient_boosting",
+            "model_name": "Gradient Boosting",
+            "composite_score": 47.77,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9557756825927252,
+              "train_time": 0.0,
+              "inference_latency": 0.9547354309922329,
+              "ram": 0.0
+            }
+          }
+        ]
+      },
+      "Accuracy-First": {
+        "top_model": "Logistic Regression",
+        "top_score": 98.46,
+        "pareto_models": [
+          "logistic_regression"
+        ],
+        "effective_weights": {
+          "performance": 0.7368421052631579,
+          "train_time": 0.10526315789473685,
+          "inference_latency": 0.10526315789473685,
+          "ram": 0.052631578947368425
+        },
+        "redistribution_note": "Energy/Carbon telemetry was unavailable on this host; its 5.0% weight was dynamically redistributed across predictive performance (73.7%), training time (10.5%), latency (10.5%), and RAM footprint (5.3%).",
+        "ranked": [
+          {
+            "rank": 1,
+            "model_id": "logistic_regression",
+            "model_name": "Logistic Regression",
+            "composite_score": 98.46,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.9824561403508771,
+              "train_time": 0.9826267658924225,
+              "inference_latency": 0.9943487418209732,
+              "ram": 1.0
+            }
+          },
+          {
+            "rank": 2,
+            "model_id": "decision_tree",
+            "model_name": "Decision Tree",
+            "composite_score": 93.05,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9130211893369787,
+              "train_time": 0.9842922014033705,
+              "inference_latency": 1.0,
+              "ram": 0.9294605809128682
+            }
+          },
+          {
+            "rank": 3,
+            "model_id": "knn",
+            "model_name": "K-Nearest Neighbors",
+            "composite_score": 89.78,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9560273762928302,
+              "train_time": 1.0,
+              "inference_latency": 0.4692542612001727,
+              "ram": 0.7344398340249015
+            }
+          },
+          {
+            "rank": 4,
+            "model_id": "gradient_boosting",
+            "model_name": "Gradient Boosting",
+            "composite_score": 80.48,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9557756825927252,
+              "train_time": 0.0,
+              "inference_latency": 0.9547354309922329,
+              "ram": 0.0
+            }
+          },
+          {
+            "rank": 5,
+            "model_id": "random_forest",
+            "model_name": "Random Forest",
+            "composite_score": 79.88,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9560273762928302,
+              "train_time": 0.5192795035527931,
+              "inference_latency": 0.0,
+              "ram": 0.7551867219916995
+            }
+          }
+        ]
+      },
+      "Edge-Deployment": {
+        "top_model": "Logistic Regression",
+        "top_score": 99.05,
+        "pareto_models": [
+          "logistic_regression"
+        ],
+        "effective_weights": {
+          "performance": 0.3157894736842105,
+          "train_time": 0.10526315789473685,
+          "inference_latency": 0.3684210526315789,
+          "ram": 0.2105263157894737
+        },
+        "redistribution_note": "Energy/Carbon telemetry was unavailable on this host; its 5.0% weight was dynamically redistributed across predictive performance (31.6%), training time (10.5%), latency (36.8%), and RAM footprint (21.1%).",
+        "ranked": [
+          {
+            "rank": 1,
+            "model_id": "logistic_regression",
+            "model_name": "Logistic Regression",
+            "composite_score": 99.05,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.9824561403508771,
+              "train_time": 0.9826267658924225,
+              "inference_latency": 0.9943487418209732,
+              "ram": 1.0
+            }
+          },
+          {
+            "rank": 2,
+            "model_id": "decision_tree",
+            "model_name": "Decision Tree",
+            "composite_score": 95.6,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9130211893369787,
+              "train_time": 0.9842922014033705,
+              "inference_latency": 1.0,
+              "ram": 0.9294605809128682
+            }
+          },
+          {
+            "rank": 3,
+            "model_id": "knn",
+            "model_name": "K-Nearest Neighbors",
+            "composite_score": 73.47,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9560273762928302,
+              "train_time": 1.0,
+              "inference_latency": 0.4692542612001727,
+              "ram": 0.7344398340249015
+            }
+          },
+          {
+            "rank": 4,
+            "model_id": "gradient_boosting",
+            "model_name": "Gradient Boosting",
+            "composite_score": 65.36,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9557756825927252,
+              "train_time": 0.0,
+              "inference_latency": 0.9547354309922329,
+              "ram": 0.0
+            }
+          },
+          {
+            "rank": 5,
+            "model_id": "random_forest",
+            "model_name": "Random Forest",
+            "composite_score": 51.56,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.9560273762928302,
+              "train_time": 0.5192795035527931,
+              "inference_latency": 0.0,
+              "ram": 0.7551867219916995
+            }
+          }
+        ]
+      }
+    }
+  },
+  "regression": {
+    "dataset": "Diabetes Progression Benchmark",
+    "n_samples": 442,
+    "n_features": 10,
+    "train_samples": 353,
+    "test_samples": 89,
+    "models": [
+      {
+        "model_id": "linear_regression",
+        "model_name": "Linear Regression (Ridge)",
+        "status": "SUCCESS",
+        "r2": 0.4541465207069827,
+        "mae": 42.81199941834888,
+        "rmse": 53.777454065343875,
+        "training_time_sec": 0.0009746000287123024,
+        "prediction_time_sec": 0.00013960001524537802,
+        "latency_per_sample_ms": 0.001568539497139079,
+        "baseline_ram_mb": 171.06,
+        "ram_current_mb": 171.24,
+        "ram_delta_mb": 0.18,
+        "carbon_emissions_g": null,
+        "energy_status": "Disabled (Opt-in tracking not requested)"
+      },
+      {
+        "model_id": "decision_tree",
+        "model_name": "Decision Tree Regressor",
+        "status": "SUCCESS",
+        "r2": 0.077602863797119,
+        "mae": 53.92134831460674,
+        "rmse": 69.90708118638626,
+        "training_time_sec": 0.00211130001116544,
+        "prediction_time_sec": 0.0001564000267535448,
+        "latency_per_sample_ms": 0.0017573036713881439,
+        "baseline_ram_mb": 171.24,
+        "ram_current_mb": 171.26,
+        "ram_delta_mb": 0.0,
+        "carbon_emissions_g": null,
+        "energy_status": "Disabled (Opt-in tracking not requested)"
+      },
+      {
+        "model_id": "random_forest",
+        "model_name": "Random Forest Regressor",
+        "status": "SUCCESS",
+        "r2": 0.44146927036843053,
+        "mae": 44.171235955056176,
+        "rmse": 54.398350726816645,
+        "training_time_sec": 0.13994019996607676,
+        "prediction_time_sec": 0.006503199983853847,
+        "latency_per_sample_ms": 0.07306966273993086,
+        "baseline_ram_mb": 171.24,
+        "ram_current_mb": 173.76,
+        "ram_delta_mb": 2.52,
+        "carbon_emissions_g": null,
+        "energy_status": "Disabled (Opt-in tracking not requested)"
+      },
+      {
+        "model_id": "knn",
+        "model_name": "K-Nearest Neighbors Regressor",
+        "status": "SUCCESS",
+        "r2": 0.42480887066066253,
+        "mae": 42.777528089887646,
+        "rmse": 55.203712625515045,
+        "training_time_sec": 0.0007621999830007553,
+        "prediction_time_sec": 0.0008494000067003071,
+        "latency_per_sample_ms": 0.00954382030000345,
+        "baseline_ram_mb": 173.76,
+        "ram_current_mb": 173.81,
+        "ram_delta_mb": 0.05,
+        "carbon_emissions_g": null,
+        "energy_status": "Disabled (Opt-in tracking not requested)"
+      },
+      {
+        "model_id": "gradient_boosting",
+        "model_name": "Gradient Boosting Regressor",
+        "status": "SUCCESS",
+        "r2": 0.45509457538852915,
+        "mae": 44.51935924291035,
+        "rmse": 53.730732622787166,
+        "training_time_sec": 0.07284129998879507,
+        "prediction_time_sec": 0.0002880999818444252,
+        "latency_per_sample_ms": 0.0032370784476901705,
+        "baseline_ram_mb": 173.88,
+        "ram_current_mb": 174.1,
+        "ram_delta_mb": 0.22,
+        "carbon_emissions_g": null,
+        "energy_status": "Disabled (Opt-in tracking not requested)"
+      }
+    ],
+    "profiles": {
+      "Balanced": {
+        "top_model": "Linear Regression (Ridge)",
+        "top_score": 74.29,
+        "pareto_models": [
+          "linear_regression",
+          "gradient_boosting"
+        ],
+        "effective_weights": {
+          "performance": 0.4705882352941177,
+          "train_time": 0.17647058823529413,
+          "inference_latency": 0.17647058823529413,
+          "ram": 0.17647058823529413
+        },
+        "redistribution_note": "Energy/Carbon telemetry was unavailable on this host; its 15.0% weight was dynamically redistributed across predictive performance (47.1%), training time (17.6%), latency (17.6%), and RAM footprint (17.6%).",
+        "ranked": [
+          {
+            "rank": 1,
+            "model_id": "linear_regression",
+            "model_name": "Linear Regression (Ridge)",
+            "composite_score": 74.29,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.4541465207069827,
+              "train_time": 0.9984738964079282,
+              "inference_latency": 1.0,
+              "ram": 1.0
+            }
+          },
+          {
+            "rank": 2,
+            "model_id": "decision_tree",
+            "model_name": "Decision Tree Regressor",
+            "composite_score": 56.25,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.077602863797119,
+              "train_time": 0.9903066574578688,
+              "inference_latency": 0.9973599830927398,
+              "ram": 0.9930069930069994
+            }
+          },
+          {
+            "rank": 3,
+            "model_id": "knn",
+            "model_name": "K-Nearest Neighbors Regressor",
+            "composite_score": 55.11,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.42480887066066253,
+              "train_time": 1.0,
+              "inference_latency": 0.8884593634175058,
+              "ram": 0.10139860139859914
+            }
+          },
+          {
+            "rank": 4,
+            "model_id": "gradient_boosting",
+            "model_name": "Gradient Boosting Regressor",
+            "composite_score": 47.16,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.45509457538852915,
+              "train_time": 0.48210852279412614,
+              "inference_latency": 0.9766641575002207,
+              "ram": 0.0
+            }
+          },
+          {
+            "rank": 5,
+            "model_id": "random_forest",
+            "model_name": "Random Forest Regressor",
+            "composite_score": 22.87,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.44146927036843053,
+              "train_time": 0.0,
+              "inference_latency": 0.0,
+              "ram": 0.11888111888112068
+            }
+          }
+        ]
+      },
+      "Green-First": {
+        "top_model": "Linear Regression (Ridge)",
+        "top_score": 82.89,
+        "pareto_models": [
+          "linear_regression",
+          "gradient_boosting"
+        ],
+        "effective_weights": {
+          "performance": 0.3125,
+          "train_time": 0.3125,
+          "inference_latency": 0.18749999999999997,
+          "ram": 0.18749999999999997
+        },
+        "redistribution_note": "Energy/Carbon telemetry was unavailable on this host; its 20.0% weight was dynamically redistributed across predictive performance (31.2%), training time (31.2%), latency (18.7%), and RAM footprint (18.7%).",
+        "ranked": [
+          {
+            "rank": 1,
+            "model_id": "linear_regression",
+            "model_name": "Linear Regression (Ridge)",
+            "composite_score": 82.89,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.4541465207069827,
+              "train_time": 0.9984738964079282,
+              "inference_latency": 1.0,
+              "ram": 1.0
+            }
+          },
+          {
+            "rank": 2,
+            "model_id": "decision_tree",
+            "model_name": "Decision Tree Regressor",
+            "composite_score": 70.69,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.077602863797119,
+              "train_time": 0.9903066574578688,
+              "inference_latency": 0.9973599830927398,
+              "ram": 0.9930069930069994
+            }
+          },
+          {
+            "rank": 3,
+            "model_id": "knn",
+            "model_name": "K-Nearest Neighbors Regressor",
+            "composite_score": 63.09,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.42480887066066253,
+              "train_time": 1.0,
+              "inference_latency": 0.8884593634175058,
+              "ram": 0.10139860139859914
+            }
+          },
+          {
+            "rank": 4,
+            "model_id": "gradient_boosting",
+            "model_name": "Gradient Boosting Regressor",
+            "composite_score": 47.6,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.45509457538852915,
+              "train_time": 0.48210852279412614,
+              "inference_latency": 0.9766641575002207,
+              "ram": 0.0
+            }
+          },
+          {
+            "rank": 5,
+            "model_id": "random_forest",
+            "model_name": "Random Forest Regressor",
+            "composite_score": 16.02,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.44146927036843053,
+              "train_time": 0.0,
+              "inference_latency": 0.0,
+              "ram": 0.11888111888112068
+            }
+          }
+        ]
+      },
+      "Accuracy-First": {
+        "top_model": "Linear Regression (Ridge)",
+        "top_score": 59.76,
+        "pareto_models": [
+          "linear_regression",
+          "gradient_boosting"
+        ],
+        "effective_weights": {
+          "performance": 0.7368421052631579,
+          "train_time": 0.10526315789473685,
+          "inference_latency": 0.10526315789473685,
+          "ram": 0.052631578947368425
+        },
+        "redistribution_note": "Energy/Carbon telemetry was unavailable on this host; its 5.0% weight was dynamically redistributed across predictive performance (73.7%), training time (10.5%), latency (10.5%), and RAM footprint (5.3%).",
+        "ranked": [
+          {
+            "rank": 1,
+            "model_id": "linear_regression",
+            "model_name": "Linear Regression (Ridge)",
+            "composite_score": 59.76,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.4541465207069827,
+              "train_time": 0.9984738964079282,
+              "inference_latency": 1.0,
+              "ram": 1.0
+            }
+          },
+          {
+            "rank": 2,
+            "model_id": "knn",
+            "model_name": "K-Nearest Neighbors Regressor",
+            "composite_score": 51.71,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.42480887066066253,
+              "train_time": 1.0,
+              "inference_latency": 0.8884593634175058,
+              "ram": 0.10139860139859914
+            }
+          },
+          {
+            "rank": 3,
+            "model_id": "gradient_boosting",
+            "model_name": "Gradient Boosting Regressor",
+            "composite_score": 48.89,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.45509457538852915,
+              "train_time": 0.48210852279412614,
+              "inference_latency": 0.9766641575002207,
+              "ram": 0.0
+            }
+          },
+          {
+            "rank": 4,
+            "model_id": "random_forest",
+            "model_name": "Random Forest Regressor",
+            "composite_score": 33.16,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.44146927036843053,
+              "train_time": 0.0,
+              "inference_latency": 0.0,
+              "ram": 0.11888111888112068
+            }
+          },
+          {
+            "rank": 5,
+            "model_id": "decision_tree",
+            "model_name": "Decision Tree Regressor",
+            "composite_score": 31.87,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.077602863797119,
+              "train_time": 0.9903066574578688,
+              "inference_latency": 0.9973599830927398,
+              "ram": 0.9930069930069994
+            }
+          }
+        ]
+      },
+      "Edge-Deployment": {
+        "top_model": "Linear Regression (Ridge)",
+        "top_score": 82.75,
+        "pareto_models": [
+          "linear_regression",
+          "gradient_boosting"
+        ],
+        "effective_weights": {
+          "performance": 0.3157894736842105,
+          "train_time": 0.10526315789473685,
+          "inference_latency": 0.3684210526315789,
+          "ram": 0.2105263157894737
+        },
+        "redistribution_note": "Energy/Carbon telemetry was unavailable on this host; its 5.0% weight was dynamically redistributed across predictive performance (31.6%), training time (10.5%), latency (36.8%), and RAM footprint (21.1%).",
+        "ranked": [
+          {
+            "rank": 1,
+            "model_id": "linear_regression",
+            "model_name": "Linear Regression (Ridge)",
+            "composite_score": 82.75,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.4541465207069827,
+              "train_time": 0.9984738964079282,
+              "inference_latency": 1.0,
+              "ram": 1.0
+            }
+          },
+          {
+            "rank": 2,
+            "model_id": "decision_tree",
+            "model_name": "Decision Tree Regressor",
+            "composite_score": 70.53,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.077602863797119,
+              "train_time": 0.9903066574578688,
+              "inference_latency": 0.9973599830927398,
+              "ram": 0.9930069930069994
+            }
+          },
+          {
+            "rank": 3,
+            "model_id": "knn",
+            "model_name": "K-Nearest Neighbors Regressor",
+            "composite_score": 58.81,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.42480887066066253,
+              "train_time": 1.0,
+              "inference_latency": 0.8884593634175058,
+              "ram": 0.10139860139859914
+            }
+          },
+          {
+            "rank": 4,
+            "model_id": "gradient_boosting",
+            "model_name": "Gradient Boosting Regressor",
+            "composite_score": 55.43,
+            "is_pareto": true,
+            "norm_scores": {
+              "performance": 0.45509457538852915,
+              "train_time": 0.48210852279412614,
+              "inference_latency": 0.9766641575002207,
+              "ram": 0.0
+            }
+          },
+          {
+            "rank": 5,
+            "model_id": "random_forest",
+            "model_name": "Random Forest Regressor",
+            "composite_score": 16.44,
+            "is_pareto": false,
+            "norm_scores": {
+              "performance": 0.44146927036843053,
+              "train_time": 0.0,
+              "inference_latency": 0.0,
+              "ram": 0.11888111888112068
+            }
+          }
+        ]
+      }
+    }
+  }
+}
